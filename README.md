@@ -14,7 +14,7 @@
 
 ## Проекты
 
-Шесть инструментов: четыре на чистом Python, без установки зависимостей, и два ML-пайплайна на scikit-learn. К каждому приложены данные и тесты, GitHub Actions гоняет их на каждый push — последние прогоны зелёные у всех шести.
+Семь инструментов: пять на чистом Python, без установки зависимостей, и два ML-пайплайна на scikit-learn. К каждому приложены данные, тесты и тег `v1.0.0`. GitHub Actions гоняет тесты на каждый push — последние прогоны зелёные у всех семи.
 
 | Проект | Что делает | Проверка |
 |:--|:--|:--|
@@ -24,6 +24,7 @@
 | [sql-analytics](https://github.com/basovdanil/sql-analytics) | десять SQL-отчётов по таблице продаж | 19 тестов, сходимость 12 из 12 |
 | [titanic-baseline](https://github.com/basovdanil/titanic-baseline) | кросс-валидация трёх моделей и генератор submission | 28 тестов, случайный лес 0,8316 ± 0,0120 |
 | [churn-baseline](https://github.com/basovdanil/churn-baseline) | отток: кросс-валидация и подбор порога при дисбалансе | 19 тестов, логистическая регрессия 0,8446 ± 0,0132 |
+| [hh-vacancy-check](https://github.com/basovdanil/hh-vacancy-check) | проверяет, открыта ли вакансия на hh.ru, без входа в аккаунт | 16 тестов, дедлайн берётся из `validThrough` |
 
 ## Стек
 
@@ -34,3 +35,19 @@ Python, SQL и Excel. К каждому результату приложен с
 - Страницы кейсов: https://basovdanil.github.io/portfolio/
 - Код и данные: https://github.com/basovdanil/portfolio (7 скриптов, 13 CSV, 2 книги)
 - Почта: basovdanil@yandex.ru
+
+---
+
+## English
+
+Data analyst in retail and food manufacturing. My rule: a report is only done when a separate check
+script recomputes it and returns `0` on match or `4` on a mismatch — every case and project below
+ships with that check, its data and its tests.
+
+- **Cases** (write-ups with numbers): <https://basovdanil.github.io/portfolio/>
+- **Tools** (Python 3.9+, standard library only unless stated): `osv-check` (trial balance from 1C),
+  `table-etl` (merge/diff/split of spreadsheet exports), `forecast-baseline` (backtest of five
+  baselines), `sql-analytics` (ten SQL reports with 12 reconciliations), `hh-vacancy-check`
+  (is an hh.ru vacancy still open), plus two scikit-learn baselines: `titanic-baseline`,
+  `churn-baseline`.
+- Every repository is tagged `v1.0.0`, has a green CI badge and an English README.
