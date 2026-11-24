@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Данил Басов — аналитика данных, отчёты с проверкой" width="100%">
+</p>
+
 # Данил Басов
 
 [![checks](https://github.com/basovdanil/portfolio/actions/workflows/checks.yml/badge.svg)](https://github.com/basovdanil/portfolio/actions/workflows/checks.yml)
@@ -5,6 +9,21 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 Делаю отчёты на данных, которые можно перепроверить. Выгрузка идёт в расчёт, а в конце скрипт проверки возвращает `0`, если всё сошлось, или `4`, если есть расхождение.
+
+## Инструменты
+
+Восемь репозиториев, у каждого тег `v1.0.0`, тесты и зелёный CI. Шесть — на стандартной библиотеке Python, ставить нечего: скачал файл и запустил.
+
+| Инструмент | Что экономит вам | Чем проверено |
+|:--|:--|:--|
+| [osv-check](https://github.com/basovdanil/osv-check) | Находит 5 дефектов в оборотно-сальдовой ведомости до того, как цифры ушли в отчёт | 13 тестов · CI · `v1.0.0` |
+| [table-etl](https://github.com/basovdanil/table-etl) | Слияние, дифф и раскладка выгрузок одной командой: 51 → 45 строк без ручной сверки | 11 тестов · CI · `v1.0.0` |
+| [forecast-baseline](https://github.com/basovdanil/forecast-baseline) | Пять бейзлайнов за один запуск: сезонность даёт MAPE 8,81 % против 14,92 % у наивной | 16 тестов · CI · `v1.0.0` |
+| [sql-analytics](https://github.com/basovdanil/sql-analytics) | Десять SQL-отчётов и 12 сверок: отчёт не уйдёт, если разбивка не сходится с итогом | 19 тестов · CI · `v1.0.0` |
+| [titanic-baseline](https://github.com/basovdanil/titanic-baseline) | Дисциплина кросс-валидации: три модели, фиксированные seed'ы, проверка артефактов | 28 тестов · CI · `v1.0.0` |
+| [churn-baseline](https://github.com/basovdanil/churn-baseline) | Порог подобран по out-of-fold, а не 0,5: AUC 0,8446 при дисбалансе 26,5 % | 19 тестов · CI · `v1.0.0` |
+| [hh-vacancy-check](https://github.com/basovdanil/hh-vacancy-check) | Не тратит отклик на закрытую вакансию: дедлайн берётся из блока schema.org | 16 тестов · CI · `v1.0.0` |
+| [pii-scan](https://github.com/basovdanil/pii-scan) | Находит почты и телефоны в CSV до отправки файла наружу, в отчёте только маски | 15 тестов · CI · `v1.0.0` |
 
 ## Кейсы
 
@@ -15,21 +34,6 @@
 | [Операции: одна команда](https://basovdanil.github.io/portfolio/case-tables/case-tables.html) | три файла, синтетика | слияние, сравнение версий, раскладка: 9 из 9 сверок |
 
 Числа в таблице посчитаны скриптами по CSV из репозитория.
-
-## Проекты
-
-Восемь инструментов: шесть на чистом Python, без установки зависимостей, и два ML-пайплайна на scikit-learn. К каждому приложены данные, тесты и тег `v1.0.0`. GitHub Actions гоняет тесты на каждый push — последние прогоны зелёные у всех восьми.
-
-| Проект | Что делает | Проверка |
-|:--|:--|:--|
-| [osv-check](https://github.com/basovdanil/osv-check) | проверяет оборотно-сальдовую ведомость из 1С | 13 тестов, демо даёт 5 находок |
-| [table-etl](https://github.com/basovdanil/table-etl) | слияние, дифф и разбивка табличных выгрузок | 11 тестов, демо 51 → 45 и 72 → 60 строк |
-| [forecast-baseline](https://github.com/basovdanil/forecast-baseline) | бэктест пяти базовых прогнозов | 16 тестов, недельная сезонность MAPE 8,81 % |
-| [sql-analytics](https://github.com/basovdanil/sql-analytics) | десять SQL-отчётов по таблице продаж | 19 тестов, сходимость 12 из 12 |
-| [titanic-baseline](https://github.com/basovdanil/titanic-baseline) | кросс-валидация трёх моделей и генератор submission | 28 тестов, случайный лес 0,8316 ± 0,0120 |
-| [churn-baseline](https://github.com/basovdanil/churn-baseline) | отток: кросс-валидация и подбор порога при дисбалансе | 19 тестов, логистическая регрессия 0,8446 ± 0,0132 |
-| [hh-vacancy-check](https://github.com/basovdanil/hh-vacancy-check) | проверяет, открыта ли вакансия на hh.ru, без входа в аккаунт | 16 тестов, дедлайн берётся из `validThrough` |
-| [pii-scan](https://github.com/basovdanil/pii-scan) | ищет персональные данные в CSV до отправки файла наружу | 15 тестов, примеры в отчёте маскируются |
 
 ## Стек
 
@@ -45,14 +49,32 @@ Python, SQL и Excel. К каждому результату приложен с
 
 ## English
 
+<p align="left">
+  <img src="assets/tools.png" alt="Eight small tools with tests and exit codes" width="70%">
+</p>
+
 Data analyst in retail and food manufacturing. My rule: a report is only done when a separate check
 script recomputes it and returns `0` on match or `4` on a mismatch — every case and project below
 ships with that check, its data and its tests.
 
-- **Cases** (write-ups with numbers): <https://basovdanil.github.io/portfolio/>
-- **Tools** (Python 3.9+, standard library only unless stated): `osv-check` (trial balance from 1C),
-  `table-etl` (merge/diff/split of spreadsheet exports), `forecast-baseline` (backtest of five
-  baselines), `sql-analytics` (ten SQL reports with 12 reconciliations), `hh-vacancy-check`
-  (is an hh.ru vacancy still open), `pii-scan` (personal data in a CSV export), plus two
-  scikit-learn baselines: `titanic-baseline`, `churn-baseline`.
-- Every repository is tagged `v1.0.0`, has a green CI badge and an English README.
+**What these tools save you**, one line each:
+
+- [osv-check](https://github.com/basovdanil/osv-check) — catches five defects in a 1C trial balance
+  before the numbers go into a report.
+- [table-etl](https://github.com/basovdanil/table-etl) — merge, diff and split spreadsheet exports
+  in one command: 51 rows in, 45 out, duplicates gone.
+- [forecast-baseline](https://github.com/basovdanil/forecast-baseline) — five baselines in one run;
+  weekly seasonality scores MAPE 8,81 % against 14,92 % for naive.
+- [sql-analytics](https://github.com/basovdanil/sql-analytics) — ten SQL reports and twelve
+  reconciliations, so a report cannot ship when its parts disagree with the total.
+- [titanic-baseline](https://github.com/basovdanil/titanic-baseline) — cross-validation discipline:
+  three models, fixed seeds, verified artifacts.
+- [churn-baseline](https://github.com/basovdanil/churn-baseline) — the threshold is tuned on
+  out-of-fold predictions, not 0.5: AUC 0,8446 at 26,5 % positives.
+- [hh-vacancy-check](https://github.com/basovdanil/hh-vacancy-check) — stops you spending an
+  application on a vacancy that is already closed.
+- [pii-scan](https://github.com/basovdanil/pii-scan) — finds e-mails and phones in a CSV before it
+  leaves the company; the report carries masks only.
+
+Cases with numbers: <https://basovdanil.github.io/portfolio/> · Every repository is tagged
+`v1.0.0`, has a green CI badge and an English README.
