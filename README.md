@@ -1,5 +1,9 @@
 # Данил Басов
 
+[![checks](https://github.com/basovdanil/portfolio/actions/workflows/checks.yml/badge.svg)](https://github.com/basovdanil/portfolio/actions/workflows/checks.yml)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 Делаю отчёты на данных, которые можно перепроверить. Выгрузка идёт в расчёт, а в конце скрипт проверки возвращает `0`, если всё сошлось, или `4`, если есть расхождение.
 
 ## Кейсы
