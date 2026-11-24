@@ -14,7 +14,7 @@
 
 ## Проекты
 
-Семь инструментов: пять на чистом Python, без установки зависимостей, и два ML-пайплайна на scikit-learn. К каждому приложены данные, тесты и тег `v1.0.0`. GitHub Actions гоняет тесты на каждый push — последние прогоны зелёные у всех семи.
+Семь инструментов: пять на чистом Python, без установки зависимостей, и два ML-пайплайна на scikit-learn. К каждому приложены данные, тесты и тег `v1.0.0`. GitHub Actions гоняет тесты на каждый push — последние прогоны зелёные у всех восьми.
 
 | Проект | Что делает | Проверка |
 |:--|:--|:--|
@@ -25,6 +25,7 @@
 | [titanic-baseline](https://github.com/basovdanil/titanic-baseline) | кросс-валидация трёх моделей и генератор submission | 28 тестов, случайный лес 0,8316 ± 0,0120 |
 | [churn-baseline](https://github.com/basovdanil/churn-baseline) | отток: кросс-валидация и подбор порога при дисбалансе | 19 тестов, логистическая регрессия 0,8446 ± 0,0132 |
 | [hh-vacancy-check](https://github.com/basovdanil/hh-vacancy-check) | проверяет, открыта ли вакансия на hh.ru, без входа в аккаунт | 16 тестов, дедлайн берётся из `validThrough` |
+| [pii-scan](https://github.com/basovdanil/pii-scan) | ищет персональные данные в CSV до отправки файла наружу | 15 тестов, примеры в отчёте маскируются |
 
 ## Стек
 
@@ -48,6 +49,6 @@ ships with that check, its data and its tests.
 - **Tools** (Python 3.9+, standard library only unless stated): `osv-check` (trial balance from 1C),
   `table-etl` (merge/diff/split of spreadsheet exports), `forecast-baseline` (backtest of five
   baselines), `sql-analytics` (ten SQL reports with 12 reconciliations), `hh-vacancy-check`
-  (is an hh.ru vacancy still open), plus two scikit-learn baselines: `titanic-baseline`,
-  `churn-baseline`.
+  (is an hh.ru vacancy still open), `pii-scan` (personal data in a CSV export), plus two
+  scikit-learn baselines: `titanic-baseline`, `churn-baseline`.
 - Every repository is tagged `v1.0.0`, has a green CI badge and an English README.
