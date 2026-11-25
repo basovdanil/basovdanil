@@ -28,6 +28,9 @@
 Живое демо: [hh-vacancy-check](https://basovdanil.github.io/hh-vacancy-check/) — вставьте id вакансии
 или исходник страницы и получите `OPEN`/`CLOSED`.
 
+Два инструмента подключаются в свой CI одной строкой: `uses: basovdanil/hh-vacancy-check@v1`
+и `uses: basovdanil/pii-scan@v1` — оба возвращают отчёт в `outputs.result` и могут ронять сборку.
+
 ## Кейсы
 
 | Кейс | Данные | Результат |
@@ -81,6 +84,9 @@ ships with that check, its data and its tests.
 
 Live demo: [hh-vacancy-check](https://basovdanil.github.io/hh-vacancy-check/) — paste a vacancy id or
 the page source and get `OPEN` / `CLOSED`.
+
+Two of them work as GitHub Actions: `uses: basovdanil/hh-vacancy-check@v1` and
+`uses: basovdanil/pii-scan@v1` — both return a report in `outputs.result` and can fail the build.
 
 Cases with numbers: <https://basovdanil.github.io/portfolio/> · Every repository is tagged
 `v1.0.0`, has a green CI badge and an English README.
