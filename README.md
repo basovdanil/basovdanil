@@ -25,6 +25,9 @@
 | [hh-vacancy-check](https://github.com/basovdanil/hh-vacancy-check) | Не тратит отклик на закрытую вакансию: дедлайн берётся из блока schema.org | 16 тестов · CI · `v1.0.0` |
 | [pii-scan](https://github.com/basovdanil/pii-scan) | Находит почты и телефоны в CSV до отправки файла наружу, в отчёте только маски | 15 тестов · CI · `v1.0.0` |
 
+Живое демо: [hh-vacancy-check](https://basovdanil.github.io/hh-vacancy-check/) — вставьте id вакансии
+или исходник страницы и получите `OPEN`/`CLOSED`.
+
 ## Кейсы
 
 | Кейс | Данные | Результат |
@@ -75,6 +78,9 @@ ships with that check, its data and its tests.
   application on a vacancy that is already closed.
 - [pii-scan](https://github.com/basovdanil/pii-scan) — finds e-mails and phones in a CSV before it
   leaves the company; the report carries masks only.
+
+Live demo: [hh-vacancy-check](https://basovdanil.github.io/hh-vacancy-check/) — paste a vacancy id or
+the page source and get `OPEN` / `CLOSED`.
 
 Cases with numbers: <https://basovdanil.github.io/portfolio/> · Every repository is tagged
 `v1.0.0`, has a green CI badge and an English README.
